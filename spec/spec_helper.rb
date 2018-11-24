@@ -1,4 +1,6 @@
 require "bundler/setup"
+
+# Require supporting files exposed for testing.
 require 'rubocop/rspec/support'
 
 RSpec.configure do |config|
