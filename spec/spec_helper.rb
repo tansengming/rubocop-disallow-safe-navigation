@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "rubocop/disallow/safe/navigation"
+require "rubocop-disallow-safe-navigation"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
