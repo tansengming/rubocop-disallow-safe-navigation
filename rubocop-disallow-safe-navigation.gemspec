@@ -3,14 +3,14 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "rubocop/disallow_safe_navigation/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "rubocop-disallow-safe-navigation"
+  spec.name          = "rubocop-disallow_safe_navigation"
   spec.version       = Rubocop::DisallowSafeNavigation::VERSION
   spec.authors       = ["SengMing Tan"]
   spec.email         = ["sengming@sanemen.com"]
 
   spec.summary       = %q{Code style checking to disallow safe navigation}
   spec.description   = spec.summary
-  spec.homepage      = "https://github.com/tansengming/rubocop-disallow-safe-navigation"
+  spec.homepage      = "https://github.com/tansengming/rubocop-disallow_safe_navigation"
   spec.license       = "MIT"
 
   spec.required_ruby_version = '>= 2.3.0'

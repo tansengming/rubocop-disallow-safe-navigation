@@ -21,4 +21,4 @@ RSpec.configure do |config|
   config.include(RuboCop::RSpec::ExpectOffense)
 end
 
-require "rubocop-disallow-safe-navigation"
+require "rubocop/disallow_safe_navigation"
