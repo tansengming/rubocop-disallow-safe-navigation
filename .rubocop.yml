@@ -3,3 +3,6 @@ AllCops:
     - 'spec/support/**/*'
     - 'spec/*_helper.rb'
     - 'bin/*'
+    - 'Gemfile'
+    - '*.gemspec'
+    - 'Rakefile'
