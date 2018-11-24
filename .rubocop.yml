@@ -1,0 +1,8 @@
+AllCops:
+  Exclude:
+    - 'spec/support/**/*'
+    - 'spec/*_helper.rb'
+    - 'bin/*'
+    - 'Gemfile'
+    - '*.gemspec'
+    - 'Rakefile'
