@@ -1,0 +1,5 @@
+AllCops:
+  Exclude:
+    - 'spec/support/**/*'
+    - 'spec/*_helper.rb'
+    - 'bin/*'
