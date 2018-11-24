@@ -1,13 +1,14 @@
-# frozen_string_literal: true
-
 module RuboCop
   module Cop
     module Style
-      # Disallow the safe navigation operator
+      # The "safe navigation" operator &. makes it easier to work with and
+      # propagate nil values. This will disallow the safe navigation operator
       #
       # @example
+      #
       #   # bad
       #   foo&.bar
+      #   a.foo&.bar
       #
       class DisallowSafeNavigation < Cop
         extend TargetRubyVersion
