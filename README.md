@@ -1,15 +1,19 @@
-# Rubocop::Disallow::Safe::Navigation
+# Rubocop::DisallowSafeNavigation
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rubocop/disallow/safe/navigation`. To experiment with that code, run `bin/console` for an interactive prompt.
+The "safe navigation" operator `&.` makes it easier to work with and propagate nil values. This cop will disallow the safe navigation operator.
 
-TODO: Delete this and the text above, and describe your gem
+```ruby
+# bad
+foo&.bar
+a.foo&.bar
+```
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rubocop-disallow-safe-navigation'
+gem 'rubocop-disallow_safe_navigation'
 ```
 
 And then execute:
@@ -18,11 +22,37 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install rubocop-disallow-safe-navigation
+    $ gem install rubocop-disallow_safe_navigation
 
 ## Usage
 
-TODO: Write usage instructions here
+You need to tell RuboCop to load the RSpec extension. There are three
+ways to do this:
+
+### RuboCop configuration file
+
+Put this into your `.rubocop.yml`.
+
+```
+require: rubocop-rspec
+```
+
+Now you can run `rubocop` and it will automatically load the RuboCop RSpec
+cops together with the standard cops.
+
+### Command line
+
+```bash
+rubocop --require rubocop-rspec
+```
+
+### Rake task
+
+```ruby
+RuboCop::RakeTask.new do |task|
+  task.requires << 'rubocop-rspec'
+end
+```
 
 ## Development
 
@@ -32,7 +62,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/tansengming/rubocop-disallow-safe-navigation.
+Bug reports and pull requests are welcome on GitHub at https://github.com/tansengming/rubocop-disallow_safe_navigation.
 
 ## License
 
