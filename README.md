@@ -34,7 +34,7 @@ ways to do this:
 Put this into your `.rubocop.yml`.
 
 ```
-require: rubocop-rspec
+require: rubocop-disallow_safe_navigation
 ```
 
 Now you can run `rubocop` and it will automatically load the RuboCop RSpec
@@ -43,14 +43,14 @@ cops together with the standard cops.
 ### Command line
 
 ```bash
-rubocop --require rubocop-rspec
+rubocop --require rubocop-disallow_safe_navigation
 ```
 
 ### Rake task
 
 ```ruby
 RuboCop::RakeTask.new do |task|
-  task.requires << 'rubocop-rspec'
+  task.requires << 'rubocop-disallow_safe_navigation'
 end
 ```
 
