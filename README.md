@@ -26,7 +26,7 @@ Or install it yourself as:
 
 ## Usage
 
-You need to tell RuboCop to load the RSpec extension. There are three
+You need to tell RuboCop to load the extension. There are three
 ways to do this:
 
 ### RuboCop configuration file
@@ -37,7 +37,7 @@ Put this into your `.rubocop.yml`.
 require: rubocop-disallow_safe_navigation
 ```
 
-Now you can run `rubocop` and it will automatically load the RuboCop RSpec
+Now you can run `rubocop` and it will automatically load the RuboCop
 cops together with the standard cops.
 
 ### Command line
